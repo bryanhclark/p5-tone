@@ -18,7 +18,7 @@ export const Steps = ({ steps, name }) => {
   return (
     <Flex>
       {steps.map((step, idx) => (
-        <Step on={step} onClick={toggleStep(name, idx)} />
+        <Step key={idx} on={step} onClick={toggleStep(name, idx)} />
       ))}
     </Flex>
   );

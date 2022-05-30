@@ -7,12 +7,8 @@ export const Tracks = () => {
   const { value } = context;
   const trackNames = Object.keys(value);
 
-  return trackNames.map((name) => {
+  return trackNames.map((name, idx) => {
     const steps = value[name];
-    return (
-      <div>
-        <Track name={name} steps={steps} />
-      </div>
-    );
+    return <Track key={idx} name={name} steps={steps} />;
   });
 };
